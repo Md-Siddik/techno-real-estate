@@ -15,11 +15,13 @@ const Home = () => {
             </Helmet>
             <Navbar></Navbar>
             <SwiperSlider></SwiperSlider>
-            <div className="grid grid-cols-3 gap-8">
-
-                {
-                    residential.map(res => <Card key={res.id} residential={res}></Card>)
-                }
+            <div className="py-8">
+                <h1 className="py-12 text-4xl font-bold text-center">Residential</h1>
+                <div className="grid grid-cols-3 gap-8">
+                    {
+                        residential.map(res => <Card key={res.id} residential={res}></Card>)
+                    }
+                </div>
             </div>
             <Footer></Footer>
         </div>

@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 import { Helmet } from "react-helmet";
@@ -46,6 +46,11 @@ const Details = () => {
                         </div>
                         <div>
                             <h1 className="text-4xl font-bold py-4">${price}</h1>
+                        </div>
+                        <div>
+                            <Link>
+                                <button className="btn btn-outline btn-info text-2xl">See Location</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
