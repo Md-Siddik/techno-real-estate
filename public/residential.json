@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Modern Family Home",
+        "segment_name": "Luxury",
+        "description": "Stunning modern family home with spacious interiors, high-end finishes, and a beautiful outdoor area. 3200 sq ft of living space in Los Angeles, California.",
+        "price": 750000,
+        "status": "Sale",
+        "area": "3200 sq ft",
+        "location": "Los Angeles, California",
+        "facilities": [
+            "Living Room",
+            "Swimming Pool",
+            "Kitchen"
+        ],
+        "image": "modern_home.jpg"
+    },
+    {
+        "id": 2,
+        "estate_title": "Cozy Urban Apartment",
+        "segment_name": "Urban",
+        "description": "Charming apartment in the heart of New York City, perfect for young professionals. 800 sq ft with access to gym and security.",
+        "price": 2000,
+        "status": "Rent",
+        "area": "800 sq ft",
+        "location": "New York City, New York",
+        "facilities": [
+            "Living Room",
+            "Gym",
+            "Security"
+        ],
+        "image": "urban_apartment.jpg"
+    },
+    {
+        "id": 3,
+        "estate_title": "Luxurious Beachfront Villa",
+        "segment_name": "Luxury",
+        "description": "Exquisite beachfront villa in Miami, Florida. 5000 sq ft with private beach access and stunning ocean views.",
+        "price": 1500000,
+        "status": "Sale",
+        "area": "5000 sq ft",
+        "location": "Miami, Florida",
+        "facilities": [
+            "Living Room",
+            "Swimming Pool",
+            "Private Beach Access"
+        ],
+        "image": "beachfront_villa.jpg"
+    },
+    {
+        "id": 4,
+        "estate_title": "Family Suburban Home",
+        "segment_name": "Suburban",
+        "description": "Spacious suburban home in Dallas, Texas. 2500 sq ft with a large backyard, ideal for families.",
+        "price": 400000,
+        "status": "Sale",
+        "area": "2500 sq ft",
+        "location": "Dallas, Texas",
+        "facilities": [
+            "Living Room",
+            "Backyard",
+            "Schools Nearby"
+        ],
+        "image": "suburban_home.jpg"
+    },
+    {
+        "id": 5,
+        "estate_title": "Charming Countryside Cottage",
+        "segment_name": "Rural",
+        "description": "Cozy countryside cottage in Asheville, North Carolina. 1800 sq ft surrounded by nature.",
+        "price": 300000,
+        "status": "Sale",
+        "area": "1800 sq ft",
+        "location": "Asheville, North Carolina",
+        "facilities": [
+            "Living Room",
+            "Garden",
+            "Fireplace"
+        ],
+        "image": "countryside_cottage.jpg"
+    },
+    {
+        "id": 6,
+        "estate_title": "City Panoramic Penthouse",
+        "segment_name": "Urban",
+        "description": "Luxurious penthouse apartment in San Francisco, California. 1500 sq ft with panoramic city views.",
+        "price": 5000,
+        "status": "Rent",
+        "area": "1500 sq ft",
+        "location": "San Francisco, California",
+        "facilities": [
+            "Living Room",
+            "Roof Terrace",
+            "Gym"
+        ],
+        "image": "city_penthouse.jpg"
+    },
+    {
+        "id": 7,
+        "estate_title": "Mountain Retreat Cabin",
+        "segment_name": "Rural",
+        "description": "Cozy mountain retreat cabin in Boulder, Colorado. 1200 sq ft nestled in the mountains with stunning views.",
+        "price": 250000,
+        "status": "Sale",
+        "area": "1200 sq ft",
+        "location": "Boulder, Colorado",
+        "facilities": [
+            "Living Room",
+            "Deck",
+            "Hiking Trails Nearby"
+        ],
+        "image": "mountain_cabin.jpg"
+    },
+    {
+        "id": 8,
+        "estate_title": "Elegant Townhouse District",
+        "segment_name": "Urban",
+        "description": "Elegant townhouse in Boston, Massachusetts. 2800 sq ft with classic architecture and modern amenities.",
+        "price": 900000,
+        "status": "Sale",
+        "area": "2800 sq ft",
+        "location": "Boston, Massachusetts",
+        "facilities": [
+            "Living Room",
+            "Garden",
+            "Historic Charm"
+        ],
+        "image": "townhouse.jpg"
+    },
+    {
+        "id": 9,
+        "estate_title": "Seaside Charming Bungalow",
+        "segment_name": "Beachfront",
+        "description": "Charming seaside bungalow in Santa Barbara, California. 1500 sq ft steps away from the sea.",
+        "price": 400000,
+        "status": "Sale",
+        "area": "1500 sq ft",
+        "location": "Santa Barbara, California",
+        "facilities": [
+            "Living Room",
+            "Ocean Views",
+            "Outdoor Dining Area"
+        ],
+        "image": "seaside_bungalow.jpg"
+    }
+]
