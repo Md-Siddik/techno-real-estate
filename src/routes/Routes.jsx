@@ -5,12 +5,14 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import Details from "../pages/Details/Details";
 import PrivetRoute from "./PrivetRoute";
+import Error from "../pages/Shared/Error/Error";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: '/',

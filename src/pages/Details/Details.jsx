@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
+import { Helmet } from "react-helmet";
 
 const Details = () => {
     const residential = useLoaderData();
@@ -10,6 +11,9 @@ const Details = () => {
     const { estate_title, segment_name, status, location, description, facilities, price, area } = res;
     return (
         <div>
+            <Helmet>
+                <title>Details</title>
+            </Helmet>
             <Navbar></Navbar>
 
             <div className="flex border-[1px]">

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../../Shared/Navbar/Navbar';
 import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
@@ -25,6 +26,9 @@ const Register = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Register</title>
+            </Helmet>
             <Navbar></Navbar>
             <div>
                 <h1 className="text-3xl my-10 text-center">Please Register</h1>
