@@ -6,6 +6,7 @@ import Register from "../pages/Register/Register";
 import Details from "../pages/Details/Details";
 import PrivetRoute from "./PrivetRoute";
 import Error from "../pages/Shared/Error/Error";
+import Leaflet from "../pages/Leaflet/Leaflet";
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
                 path: '/register',
                 element: <Register></Register>
             },
+            {
+                path: '/Leaflet',
+                element: <Leaflet></Leaflet>
+            }
             
         ]
     }

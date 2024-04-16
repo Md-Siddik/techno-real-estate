@@ -12,7 +12,7 @@ const Details = () => {
     return (
         <div>
             <Helmet>
-                <title>Details</title>
+                <title>Techno-Real-Estate | Details</title>
             </Helmet>
             <Navbar></Navbar>
 
@@ -48,7 +48,7 @@ const Details = () => {
                             <h1 className="text-4xl font-bold py-4">${price}</h1>
                         </div>
                         <div>
-                            <Link>
+                            <Link to='/Leaflet'>
                                 <button className="btn btn-outline btn-info text-2xl">See Location</button>
                             </Link>
                         </div>

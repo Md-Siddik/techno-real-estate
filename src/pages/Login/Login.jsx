@@ -15,6 +15,7 @@ const Login = () => {
         const email = form.get('email');
         const password = form.get('password');
         // console.log(email, password);
+
         signIn(email, password)
         .then(result => {
             navigate(location?.state ? location.state : '/');
@@ -27,7 +28,7 @@ const Login = () => {
     return (
         <div>
             <Helmet>
-                <title>Login</title>
+                <title>Techno-Real-Estate | Login</title>
             </Helmet>
             <Navbar></Navbar>
             <div>
