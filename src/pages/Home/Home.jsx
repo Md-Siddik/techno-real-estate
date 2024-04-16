@@ -3,6 +3,7 @@ import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 import Card from "../Shared/Cards/Card"
 import { Helmet } from "react-helmet";
+import SwiperSlider from "../SwiperSlider/SwiperSlider";
 
 
 const Home = () => {
@@ -13,7 +14,9 @@ const Home = () => {
                 <title>Home</title>
             </Helmet>
             <Navbar></Navbar>
-            <div className="grid grid-cols-3 gap-y-6">
+            <SwiperSlider></SwiperSlider>
+            <div className="grid grid-cols-3 gap-8">
+
                 {
                     residential.map(res => <Card key={res.id} residential={res}></Card>)
                 }
