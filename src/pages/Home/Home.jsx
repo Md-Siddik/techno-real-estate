@@ -6,7 +6,6 @@ import Card from "../Shared/Cards/Card"
 
 const Home = () => {
     const residential = useLoaderData();
-    console.log(residential)
     return (
         <div>
             <Navbar></Navbar>

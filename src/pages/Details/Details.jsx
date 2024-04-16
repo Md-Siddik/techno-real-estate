@@ -1,52 +1,49 @@
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 
 const Details = () => {
-    const {id} = useParams();
+    const residential = useLoaderData();
+    const { id } = useParams();
+    const idInt = parseInt(id);
+    const res = residential.find(res => res.id === idInt);
+    const { estate_title, segment_name, status, location, description, facilities, price, area } = res;
     return (
         <div>
             <Navbar></Navbar>
 
-            <div>
-                <div className="card lg:card-side bg-base-100">
-                    <figure className="w-[40%] max-sm:w-full"><img className="w-[60%] rounded-xl max-sm:w-1/2" src="" alt="Album" /></figure>
-                    <div className="card-body w-[50%] max-sm:w-full">
-                        <h2 className="card-title text-4xl">{id}</h2>
-                        {/* <p className="text-xl text-gray-500 font-bold">By : {book.author}</p>
-                        <div className="border-y-[1px]">
-                            <p className="text-xl font-bold text-gray-500 py-4">{book.category}</p>
-                        </div>
-                        <p className="text-lg text-gray-500"><span className="font-bold text-black">Review : </span>{book.review}</p>
-                        <div className="border-b-[1px] text-xl py-8 flex gap-8">
-                            <span className="font-bold">Tag</span>
-                            <button className="bg-green-50 py-1 px-3 rounded-full text-[#23BE0A]">#{book.tags[0]}</button>
-                            <button className="bg-green-50 py-1 px-3 rounded-full text-[#23BE0A]">#{book.tags[1]}</button>
-                        </div>
-                        <table className="text-xl">
-                            <tr>
-                                <td className="py-4">Number of Pages:</td>
-                                <td className="py-4">{book.totalPages}</td>
-                            </tr>
-                            <tr>
-                                <td className="py-4">Publisher:</td>
-                                <td className="py-4">{book.publisher}</td>
-                            </tr>
-                            <tr>
-                                <td className="py-4">Year of Publishing:</td>
-                                <td className="py-4">{book.yearOfPublishing}</td>
-                            </tr>
-                            <tr>
-                                <td className="py-4">Rating:</td>
-                                <td className="py-4">{book.rating}</td>
-                            </tr>
-                        </table>
-                        <div className="card-actions">
-                            <button onClick={handleReadBook} className="btn btn-outline text-xl">Read</button>
-                            <button onClick={handleWishList} className="btn bg-[#50B1C9] text-white text-xl">Wishlist</button>
-                        </div> */}
+            <div className="flex border-[1px]">
+                <div className="w-[45%]">
+                    <div className="w-full h-[500px]">
+                        <img className="w-full h-full" src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="" />
                     </div>
-                    
+                </div>
+                <div className="w-[55%]">
+                    <div className="p-8">
+                        <h1 className="text-4xl font-bold">{id}. {estate_title}</h1>
+                        <div className="flex gap-32 text-2xl py-6">
+                            <h1>Segment : {segment_name}</h1>
+                            <h1>For : {status}</h1>
+                        </div>
+                        <div className="flex gap-4 py-4 border-y-[1px] text-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                            <p>{location} {`( ${ area } )`}</p>
+                        </div>
+                        <p className="py-4 text-xl">{description}</p>
+                        <div>
+                            <ul className="list-disc pl-8 text-xl">
+                                {
+                                    facilities.map(facilitie => <li>{facilitie}</li>)
+                                }
+                            </ul>
+                        </div>
+                        <div>
+                            <h1 className="text-4xl font-bold py-4">${price}</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
 

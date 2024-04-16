@@ -10,7 +10,7 @@ const Card = ({ residential }) => {
             </figure>
             <div className="card-body">
                 <div className="w-full text-left">
-                    <h2 className="card-title text-2xl py-4"><span>{id}.</span>{estate_title}</h2>
+                    <h2 className="card-title text-2xl py-4"><span>{id}. </span>{estate_title}</h2>
                     <div className="w-full flex gap-32 text-xl py-2">
                         <span>{segment_name}</span>
                         <span>For : {status}</span>
@@ -21,7 +21,7 @@ const Card = ({ residential }) => {
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                     </svg>
-                    <p>{location}</p>
+                    <p>{location}   {`( ${area} )`}</p>
                 </div>
                 <div className="text-left">
                     <p>{description}</p>
@@ -33,12 +33,11 @@ const Card = ({ residential }) => {
                         }
                     </ul>
                 </div>
-                <div className="w-full flex gap-14 text-xl py-2">
+                <div className="w-full flex gap-14 text-2xl font-bold py-2">
                     <span>${price}</span>
-                    <span>Area : {area}</span>
                 </div>
                 <div className="text-center">
-                    <Link to={`/details/${id}`}>
+                    <Link residential={residential} to={`/details/${id}`}>
                         <button className="btn">View Property</button>
                     </Link>
                 </div>
