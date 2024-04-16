@@ -38,7 +38,6 @@ const Register = () => {
             <Helmet>
                 <title>Techno-Real-Estate | Register</title>
             </Helmet>
-            <Navbar></Navbar>
             <div>
                 <h1 className="text-3xl my-10 text-center">Please Register</h1>
                 <form onSubmit={handleRegister} className="md:w-3/4 lg:w-1/2 mx-auto">

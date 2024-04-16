@@ -1,9 +1,8 @@
 import { useLoaderData } from "react-router-dom";
-import Footer from "../Shared/Footer/Footer";
-import Navbar from "../Shared/Navbar/Navbar";
-import Card from "../Shared/Cards/Card"
 import { Helmet } from "react-helmet";
 import SwiperSlider from "../SwiperSlider/SwiperSlider";
+import Card from "../Shared/Cards/Card";
+
 
 
 const Home = () => {
@@ -13,7 +12,6 @@ const Home = () => {
             <Helmet>
                 <title>Techno-Real-Estate | Home</title>
             </Helmet>
-            <Navbar></Navbar>
             <SwiperSlider></SwiperSlider>
             <div className="py-8">
                 <h1 className="py-12 text-4xl font-bold text-center">Residential</h1>
@@ -23,7 +21,6 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <Footer></Footer>
         </div>
     );
 };

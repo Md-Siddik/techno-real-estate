@@ -30,7 +30,7 @@ const Login = () => {
             <Helmet>
                 <title>Techno-Real-Estate | Login</title>
             </Helmet>
-            <Navbar></Navbar>
+            {/* <Navbar></Navbar> */}
             <div>
                 <h1 className="text-3xl my-10 text-center">Please Login</h1>
                 <form onSubmit={handleLogin} className="md:w-3/4 lg:w-1/2 mx-auto">
