@@ -14,6 +14,8 @@ import Details from './pages/Details/Details';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Leaflet from './pages/Leaflet/Leaflet';
+import UserProfile from './pages/UserProfile/UserProfile';
+import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
           {
               path: '/register',
               element: <Register></Register>
+          },
+          {
+              path: '/UserProfile',
+              element: <PrivetRoute><UserProfile></UserProfile></PrivetRoute>
+          },
+          {
+              path: '/UpdateProfile',
+              element: <PrivetRoute><UpdateProfile></UpdateProfile></PrivetRoute>
           },
           {
               path: '/Leaflet',

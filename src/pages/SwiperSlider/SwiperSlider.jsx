@@ -1,5 +1,4 @@
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -27,22 +26,22 @@ const SwiperSlider = () => {
                   }}
             >
                 <SwiperSlide>
-                    <div className='h-[500px] bg-green-500 slide_bg1 bg_properties'>
+                    <div className='h-[500px] slide_bg1 bg_properties'>
                         <h1 className='text-4xl'>Slider 1</h1>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='h-[500px] bg-green-500 slide_bg2 bg_properties'>
+                    <div className='h-[500px] slide_bg2 bg_properties'>
                         <h1 className='text-4xl'>Slider 2</h1>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='h-[500px] bg-green-500 slide_bg3 bg_properties'>
+                    <div className='h-[500px] slide_bg3 bg_properties'>
                         <h1 className='text-4xl'>Slider 3</h1>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='h-[500px] bg-green-500 slide_bg4 bg_properties'>
+                    <div className='h-[500px] slide_bg4 bg_properties'>
                         <h1 className='text-4xl'>Slider 4</h1>
                     </div>
                 </SwiperSlide>

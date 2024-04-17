@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 .slide_bg1 {
-    background-image: url('https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg');
+    background-image: url('../assets/image/slide1.jpg');
 }
 .slide_bg2 {
-    background-image: url('https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg');
+    background-image: url('../assets/image/slide2.jpg');
 }
 .slide_bg3 {
-    background-image: url('https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg');
+    background-image: url('../assets/image/slide3.jpg');
 }
 .slide_bg4 {
-    background-image: url('https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg');
+    background-image: url('../assets/image/slide4.jpg');
 }
 .bg_properties {
     background-repeat: no-repeat;

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import userImage from "../../../../assets/image/user.jpg"
 
 
 const Navbar = () => {
@@ -39,9 +40,11 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end flex gap-4">
                     <div className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
+                        {
+                            user && <div className="w-10 rounded-full">
+                                <img src={ user.photoUrl? user.photoUrl : userImage} />
+                            </div>
+                        }
                     </div>
                     {
                         user ?

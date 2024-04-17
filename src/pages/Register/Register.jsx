@@ -1,15 +1,21 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { Helmet } from 'react-helmet';
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import Home from '../Home/Home';
+import { updateProfile } from 'firebase/auth';
+// import { createUserWithEmailAndPassword } from 'firebase/auth';
+// import app from '../../firebase/firebase.config';
 
 const Register = () => {
     const [registerError, setRegisterError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
     const { createUser } = useContext(AuthContext);
 
+    // const auth = getAuth(app);
     const handleRegister = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
@@ -35,6 +41,15 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
+                updateProfile(result.user, {
+                    displayName: name,
+                    photoURL: photo
+                })
+                .then()
+                .catch(error => {
+                    console.error(error);
+                })
+                navigate('/');
             })
             .catch(error => {
                 console.error(error);
@@ -81,7 +96,7 @@ const Register = () => {
                         <button className="btn btn-primary">Register</button>
                     </div>
                     <div>
-
+                        <FaGoogle></FaGoogle>
                     </div>
                 </form>
                 {
