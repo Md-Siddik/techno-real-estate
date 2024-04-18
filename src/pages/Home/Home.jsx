@@ -13,9 +13,9 @@ const Home = () => {
                 <title>Techno-Real-Estate | Home</title>
             </Helmet>
             <SwiperSlider></SwiperSlider>
-            <div className="py-8">
+            <div className="py-8 container m-auto">
                 <h1 className="py-12 text-4xl font-bold text-center">Residential</h1>
-                <div className="grid grid-cols-3 gap-8">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 w-fit m-auto">
                     {
                         residential.map(res => <Card key={res.id} residential={res}></Card>)
                     }

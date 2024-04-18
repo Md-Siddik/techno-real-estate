@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.container {
+    width: 90%;
+    max-width: 1280px;
+}
 .slide_bg1 {
     background-image: url('../assets/image/slide1.jpg');
 }

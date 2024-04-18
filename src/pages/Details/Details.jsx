@@ -1,6 +1,4 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import Footer from "../Shared/Footer/Footer";
-import Navbar from "../Shared/Navbar/Navbar";
 import { Helmet } from "react-helmet";
 
 const Details = () => {
@@ -14,7 +12,6 @@ const Details = () => {
             <Helmet>
                 <title>Techno-Real-Estate | Details</title>
             </Helmet>
-            <Navbar></Navbar>
 
             <div className="flex border-[1px]">
                 <div className="w-[45%]">
@@ -56,7 +53,6 @@ const Details = () => {
                 </div>
             </div>
 
-            <Footer></Footer>
         </div>
     );
 };

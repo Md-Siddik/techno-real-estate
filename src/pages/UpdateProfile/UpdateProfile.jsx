@@ -10,10 +10,9 @@ const UpdateProfileInfo = () => {
     const { user, updateUser } = useContext(AuthContext);
 
     const handleUpdate = e => {
-
         e.preventDefault();
         const name = e.target.name.value;
-        const photo = e.target.email.value;
+        const photo = e.target.photo.value;
 
         updateUser(name, photo)
         .then(() => {
@@ -29,9 +28,9 @@ const UpdateProfileInfo = () => {
             <Helmet>
                 <title>Techno-Real-Estate | UpdateProfile</title>
             </Helmet>
-            <div>
+            <div className="w-[500px] m-auto pb-24">
                 <h1 className="text-3xl my-10 text-center">Update Profile</h1>
-                <form onSubmit={handleUpdate} className="md:w-3/4 lg:w-1/2 mx-auto">
+                <form onSubmit={handleUpdate} className="w-full mx-auto">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>

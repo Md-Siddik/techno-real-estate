@@ -4,15 +4,15 @@ const Card = ({ residential }) => {
     const { id, estate_title, segment_name, status, location, description, facilities, price, area } = residential;
     console.log(estate_title);
     return (
-        <div>
-            <div data-aos="zoom-in" className="card w-[400px] bg-base-100 border-[1px] border-solid">
+        <div className="">
+            <div data-aos="zoom-in" className="card w-[350px] bg-base-100 border-[1px] border-solid h-full">
                 <figure className="h-[300px] rounded-t-xl bg-gray-300">
                     <img src='' alt="Shoes" className="rounded-xl w-[150px]" />
                 </figure>
                 <div className="card-body">
                     <div className="w-full text-left">
-                        <h2 className="card-title text-2xl py-4"><span>{id}. </span>{estate_title}</h2>
-                        <div className="w-full flex gap-32 text-xl py-2">
+                        <h2 className="card-title text-xl py-4 flex items-start"><span>{id}. </span>{estate_title}</h2>
+                        <div className="w-full flex gap-32 text-lg py-2">
                             <span>{segment_name}</span>
                             <span>For : {status}</span>
                         </div>
@@ -34,7 +34,7 @@ const Card = ({ residential }) => {
                             }
                         </ul>
                     </div>
-                    <div className="w-full flex gap-14 text-2xl font-bold py-2">
+                    <div className="w-full flex gap-14 text-xl font-bold py-2">
                         <span>${price}</span>
                     </div>
                     <div className="text-center">

@@ -2,8 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { Helmet } from 'react-helmet';
-import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
-import Home from '../Home/Home';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { updateProfile } from 'firebase/auth';
 // import { createUserWithEmailAndPassword } from 'firebase/auth';
 // import app from '../../firebase/firebase.config';
@@ -62,9 +61,9 @@ const Register = () => {
             <Helmet>
                 <title>Techno-Real-Estate | Register</title>
             </Helmet>
-            <div>
+            <div className="w-[500px] m-auto pb-24">
                 <h1 className="text-3xl my-10 text-center">Please Register</h1>
-                <form onSubmit={handleRegister} className="md:w-3/4 lg:w-1/2 mx-auto">
+                <form onSubmit={handleRegister} className="w-full mx-auto">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
@@ -94,9 +93,6 @@ const Register = () => {
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn btn-primary">Register</button>
-                    </div>
-                    <div>
-                        <FaGoogle></FaGoogle>
                     </div>
                 </form>
                 {

@@ -58,9 +58,9 @@ const Login = () => {
             <Helmet>
                 <title>Techno-Real-Estate | Login</title>
             </Helmet>
-            <div>
+            <div className="w-[500px] m-auto pb-24">
                 <h1 className="text-3xl my-10 text-center">Please Login</h1>
-                <form onSubmit={handleLogin} className="md:w-3/4 lg:w-1/2 mx-auto">
+                <form onSubmit={handleLogin} className="md:w-full mx-auto">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
@@ -77,7 +77,7 @@ const Login = () => {
                         <button className="btn btn-primary">Login</button>
                     </div>
                 </form>
-                <div>
+                <div className="flex justify-center gap-8 pt-8">
                     <button onClick={handleGoogleSignIn} className="btn text-2xl">
                         <FaGoogle></FaGoogle>
                     </button>

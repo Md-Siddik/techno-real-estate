@@ -16,6 +16,7 @@ import Register from './pages/Register/Register';
 import Leaflet from './pages/Leaflet/Leaflet';
 import UserProfile from './pages/UserProfile/UserProfile';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
+import Best from './pages/Best/Best';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
           {
               path: '/Leaflet',
               element: <Leaflet></Leaflet>
+          },
+          {
+            path: '/best',
+            element: <PrivetRoute><Best></Best></PrivetRoute>,
+            loader: () => fetch('/public/residential.json')
           }
           
       ]
