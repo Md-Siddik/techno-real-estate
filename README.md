@@ -1,6 +1,6 @@
 # Techno-Real-Estate
 
-Welcome to Techno-Real-Estate, your one-stop destination for all things related to real estate with a touch of technology. Visit our live site at http://localhost:5173/.
+Welcome to Techno-Real-Estate, your one-stop destination for all things related to real estate with a touch of technology. Visit our live site at https://techno-real-estate.web.app/
 
 # Features and Characteristics
 
@@ -24,7 +24,7 @@ Welcome to Techno-Real-Estate, your one-stop destination for all things related 
 1. Clone this repository.
 2. Install dependencies using npm install.
 3. Run the application using npm start.
-4. Visit http://localhost:5173/ in your web browser to explore Techno-Real-Estate.
+4. Visit https://techno-real-estate.web.app/ in your web browser to explore Techno-Real-Estate.
 
 # Contributing
 
