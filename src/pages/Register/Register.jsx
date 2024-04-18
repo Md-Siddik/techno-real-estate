@@ -4,6 +4,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { Helmet } from 'react-helmet';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { updateProfile } from 'firebase/auth';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
     const [registerError, setRegisterError] = useState('');
@@ -23,15 +24,15 @@ const Register = () => {
         setRegisterError('');
 
         if (password.length < 6) {
-            setRegisterError('Password should be at least 6 characters of longer');
+            toast.error('Password should be at least 6 characters of longer');
             return;
         }
         else if (!/[A-Z]/.test(password)) {
-            setRegisterError('Your password should have at least one uppercase character.');
+            toast.error('Your password should have at least one uppercase character.');
             return;
         }
         else if (!/[a-z]/.test(password)) {
-            setRegisterError('Your password should have at least one lowercase character.');
+            toast.error('Your password should have at least one lowercase character.');
             return;
         }
 
@@ -98,6 +99,7 @@ const Register = () => {
                 }
                 <p className="text-center mt-4">Already have an account? <Link className="font-bold text-blue-500" to="/login">Login</Link></p>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

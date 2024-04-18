@@ -13,7 +13,6 @@ import PrivetRoute from "./routes/PrivetRoute";
 import Details from './pages/Details/Details';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
-import Leaflet from './pages/Leaflet/Leaflet';
 import UserProfile from './pages/UserProfile/UserProfile';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 import Best from './pages/Best/Best';
@@ -49,10 +48,6 @@ const router = createBrowserRouter([
           {
               path: '/UpdateProfile',
               element: <PrivetRoute><UpdateProfile></UpdateProfile></PrivetRoute>
-          },
-          {
-              path: '/Leaflet',
-              element: <Leaflet></Leaflet>
           },
           {
             path: '/best',

@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet";
 import { GoogleAuthProvider, GithubAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [user, setUser] = useState(null);
@@ -16,18 +18,23 @@ const Login = () => {
 
 
     const handleLogin = e => {
-        e.preventDefault();
-        const form = new FormData(e.currentTarget);
-        const email = form.get('email');
-        const password = form.get('password');
+        try {
+            e.preventDefault();
+            const form = new FormData(e.currentTarget);
+            const email = form.get('email');
+            const password = form.get('password');
 
-        signIn(email, password)
-            .then(result => {
-                navigate(location?.state ? location.state : '/');
-            })
-            .catch(error => {
-                console.error(error);
-            })
+            signIn(email, password)
+                .then(result => {
+                    navigate(location?.state ? location.state : '/');
+                })
+                .catch(error => {
+                    toast(error)
+                })
+        }
+        catch(error){
+            toast.error("Faild to login");
+        }
     }
     const handleGoogleSignIn = () => {
         signInWithPopup(auth, googleProvider)
@@ -37,21 +44,21 @@ const Login = () => {
                 console.log(user);
             })
             .catch(error => {
-                console.error(error);
+                toast.error(error)
             })
     }
     const handleGithubSignIn = () => {
         signInWithPopup(auth, githubProvider)
-        .then(result => {
-            const loggedInUser = result.user;
-            setUser(loggedInUser);
-            console.log(user);
-        })
-        .catch(error => {
-            console.error(error);
-        })
+            .then(result => {
+                const loggedInUser = result.user;
+                setUser(loggedInUser);
+                console.log(user);
+            })
+            .catch(error => {
+                toast.error(error)
+            })
     }
-    // console.log(user);
+    console.log(user);
 
     return (
         <div>
@@ -87,6 +94,7 @@ const Login = () => {
                 </div>
                 <p className="text-center mt-4">Do not have any account? <Link className="font-bold text-blue-500" to="/register">Register</Link></p>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

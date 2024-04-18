@@ -1,12 +1,12 @@
 
 const BestCard = ({ best }) => {
-    const { estate_title, segment_name, status, location, description, facilities, price, area } = best;
+    const { estate_title, segment_name, status, location, description, facilities, price, area, image } = best;
     return (
         <div className="container m-auto">
             <div className="flex border-[1px] mb-6">
                 <div className="w-[45%]">
-                    <div className="w-full h-[500px]">
-                        <img className="w-full h-full" src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="" />
+                    <div className="w-full h-full flex items-center justify-center">
+                        <img className="w-full h-fit" src={image} alt="" />
                     </div>
                 </div>
                 <div className="w-[55%]">

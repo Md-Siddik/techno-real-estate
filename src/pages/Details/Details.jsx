@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const Details = () => {
@@ -6,7 +6,7 @@ const Details = () => {
     const { id } = useParams();
     const idInt = parseInt(id);
     const res = residential.find(res => res.id === idInt);
-    const { estate_title, segment_name, status, location, description, facilities, price, area } = res;
+    const { estate_title, segment_name, status, location, description, facilities, price, area, image } = res;
     return (
         <div>
             <div className="container m-auto">
@@ -16,8 +16,8 @@ const Details = () => {
 
                 <div className="flex border-[1px]">
                     <div className="w-[45%]">
-                        <div className="w-full h-[500px]">
-                            <img className="w-full h-full" src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="" />
+                        <div className="w-full h-full flex items-center justify-center">
+                            <img className="w-full h-fit" src={image} alt="" />
                         </div>
                     </div>
                     <div className="w-[55%]">

@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
 const Card = ({ residential }) => {
-    const { id, estate_title, segment_name, status, location, description, facilities, price, area } = residential;
+    const { id, estate_title, segment_name, status, location, description, facilities, price, area, image } = residential;
     console.log(estate_title);
     return (
         <div className="">
             <div data-aos="zoom-in" className="card w-[350px] bg-base-100 border-[1px] border-solid h-full">
-                <figure className="h-[300px] rounded-t-xl bg-gray-300">
-                    <img src='' alt="Shoes" className="rounded-xl w-[150px]" />
+                <figure className="h-fit rounded-t-xl bg-gray-300">
+                    <img src={image} className="rounded-xl w-full" />
                 </figure>
                 <div className="card-body">
                     <div className="w-full text-left">
