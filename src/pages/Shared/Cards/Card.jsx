@@ -39,7 +39,7 @@ const Card = ({ residential }) => {
                     </div>
                     <div className="text-center">
                         <Link residential={residential} to={`/details/${id}`}>
-                            <button className="btn">View Property</button>
+                            <button className="btn btn-info text-lg mt-4">View Property</button>
                         </Link>
                     </div>
                 </div>

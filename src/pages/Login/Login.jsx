@@ -51,7 +51,7 @@ const Login = () => {
             console.error(error);
         })
     }
-    console.log(user);
+    // console.log(user);
 
     return (
         <div>

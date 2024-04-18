@@ -4,13 +4,16 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCHGReCM28kzwww3kk8LESuUAsiNy7I5c8",
-  authDomain: "techno-real-estate.firebaseapp.com",
-  projectId: "techno-real-estate",
-  storageBucket: "techno-real-estate.appspot.com",
-  messagingSenderId: "913386868421",
-  appId: "1:913386868421:web:1d7e4fd1fdb90c8743eaac"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

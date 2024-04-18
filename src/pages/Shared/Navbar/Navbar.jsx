@@ -22,24 +22,26 @@ const Navbar = () => {
 
     return (
         <div className="container m-auto">
-            <div className="navbar bg-base-100">
+            <div className="navbar">
                 <div className="navbar-start">
-                    <a className="btn btn-ghost text-xl">TechnoEstate</a>
+                    <a className="btn text-2xl font-bold">TechnoEstate</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 text-lg">
                         {navLinks}
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-4">
-                    <div className="btn btn-ghost btn-circle avatar">
-                        {
-                            user && <div className="w-10 rounded-full">
-                                <img alt={userImage} src={user.photoURL ? user.photoURL : userImage} />
-                            </div>
-                        }
-                    </div>
-                    <div className="hidden lg:block">
+                    {
+                        user && <div className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom z-[999]" data-tip={user.displayName}>
+                            {
+                                user && <div className="w-full rounded-full">
+                                    <img alt={userImage} src={user.photoURL ? user.photoURL : userImage} />
+                                </div>
+                            }
+                        </div>
+                    }
+                    <div className="hidden lg:block btn-info">
                         {
                             user ?
                                 <button onClick={handleSignOut} className="btn">Sigh Out</button>
@@ -64,7 +66,6 @@ const Navbar = () => {
                                 <Link to="/login">
                                     <button className="btn">Login</button>
                                 </Link>
-
                         }
                     </ul>
                 </div>

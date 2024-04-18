@@ -4,8 +4,6 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { Helmet } from 'react-helmet';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { updateProfile } from 'firebase/auth';
-// import { createUserWithEmailAndPassword } from 'firebase/auth';
-// import app from '../../firebase/firebase.config';
 
 const Register = () => {
     const [registerError, setRegisterError] = useState('');
