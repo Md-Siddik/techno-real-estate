@@ -36,7 +36,7 @@ const Navbar = () => {
                         user && <div className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom z-[999]" data-tip={user.displayName}>
                             {
                                 user && <div className="w-full rounded-full">
-                                    <img alt={userImage} src={user.photoURL ? user.photoURL : userImage} />
+                                    <img alt="Profile" src={user.photoURL ? user.photoURL : userImage} />
                                 </div>
                             }
                         </div>

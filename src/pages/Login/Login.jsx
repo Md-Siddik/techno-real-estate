@@ -29,11 +29,11 @@ const Login = () => {
                     navigate(location?.state ? location.state : '/');
                 })
                 .catch(error => {
-                    toast(error)
+                    toast.error("Invalid email or password")
                 })
         }
         catch(error){
-            toast.error("Faild to login");
+            console.error(error)
         }
     }
     const handleGoogleSignIn = () => {
@@ -41,6 +41,7 @@ const Login = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 setUser(loggedInUser);
+                navigate(location?.state ? location.state : '/');
                 console.log(user);
             })
             .catch(error => {
@@ -52,13 +53,14 @@ const Login = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 setUser(loggedInUser);
+                navigate(location?.state ? location.state : '/');
                 console.log(user);
             })
             .catch(error => {
                 toast.error(error)
             })
     }
-    console.log(user);
+    // console.log(user);
 
     return (
         <div>

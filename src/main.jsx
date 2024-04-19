@@ -26,12 +26,12 @@ const router = createBrowserRouter([
           {
               path: '/',
               element: <Home></Home>,
-              loader: () => fetch('/residential.json')
+              loader: () => fetch('./residential.json')
           },
           {
               path: '/details/:id',
               element: <PrivetRoute><Details></Details></PrivetRoute>,
-              loader: () => fetch('/public/residential.json')
+              loader: () => fetch('./residential.json')
           },
           {
               path: '/login',
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
           {
             path: '/best',
             element: <PrivetRoute><Best></Best></PrivetRoute>,
-            loader: () => fetch('/public/residential.json')
+            loader: () => fetch('./residential.json')
           }
           
       ]
